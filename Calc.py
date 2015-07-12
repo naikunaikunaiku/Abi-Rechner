@@ -21,36 +21,63 @@ inst = Calc()
 
 def getmarks():
 
-    inst.deutsch = str(input("deutschnote"))
+    try:
+
+        inst.deutsch = input("deutschnote")
+
+    except SyntaxError:
+
+        inst.deutsch = 0
+
     if inst.deutsch > 15:
         inst.deutsch = 15
     elif inst.deutsch < 0:
         inst.deutsch = 0
-    inst.biologie = int(input("biologienote"))
+    try:
+        inst.biologie = int(input("biologienote"))
+    except SyntaxError:
+        inst.biologie = 0
     if inst.biologie > 15:
         inst.biologie = 15
     elif inst.biologie < 0:
         inst.biologie = 0
-    inst.mathe = input("mathenote")
+
+    try:
+        inst.mathe = input("mathenote")
+    except SyntaxError:
+        inst.mathe = 0
     if inst.mathe > 15:
         inst.mathe = 15
     elif inst.mathe < 0:
         inst.mathe = 0
-    inst.englisch = input("englischnote")
+
+    try:
+        inst.englisch = input("englischnote")
+    except SyntaxError:
+        inst.englisch = 0
     if inst.englisch > 15:
         inst.englisch = 15
     elif inst.englisch < 0:
         inst.englisch = 0
-    inst.soziologie = input("soziologienote")
+
+    try:
+        inst.soziologie = input("soziologienote")
+    except SyntaxError:
+        inst.soziologie = 0
     if inst.soziologie > 15:
         inst.soziologie = 15
     elif inst.soziologie < 0:
         inst.soziologie = 0
-    inst.geschichte = input("geschichtenote")
+
+    try:
+        inst.geschichte = input("geschichtenote")
+    except SyntaxError:
+        inst.geschichte = 0
     if inst.geschichte > 15:
         inst.geschichte = 15
     elif inst.geschichte < 0:
         inst.geschichte = 0
+
     inst.gotmarks = True
 
 def calcandreturn():
