@@ -1,3 +1,5 @@
+
+
 __author__ = 'ivo'
 
 #import math
@@ -18,12 +20,64 @@ class Calc:
 inst = Calc()
 
 def getmarks():
-    inst.deutsch = input("deutschnote")
-    inst.biologie = input("biologienote")
-    inst.mathe = input("mathenote")
-    inst.englisch = input("englischnote")
-    inst.soziologie = input("soziologienote")
-    inst.geschichte = input("geschichtenote")
+
+    try:
+
+        inst.deutsch = input("deutschnote")
+
+    except SyntaxError:
+
+        inst.deutsch = 0
+
+    if inst.deutsch > 15:
+        inst.deutsch = 15
+    elif inst.deutsch < 0:
+        inst.deutsch = 0
+    try:
+        inst.biologie = int(input("biologienote"))
+    except SyntaxError:
+        inst.biologie = 0
+    if inst.biologie > 15:
+        inst.biologie = 15
+    elif inst.biologie < 0:
+        inst.biologie = 0
+
+    try:
+        inst.mathe = input("mathenote")
+    except SyntaxError:
+        inst.mathe = 0
+    if inst.mathe > 15:
+        inst.mathe = 15
+    elif inst.mathe < 0:
+        inst.mathe = 0
+
+    try:
+        inst.englisch = input("englischnote")
+    except SyntaxError:
+        inst.englisch = 0
+    if inst.englisch > 15:
+        inst.englisch = 15
+    elif inst.englisch < 0:
+        inst.englisch = 0
+
+    try:
+        inst.soziologie = input("soziologienote")
+    except SyntaxError:
+        inst.soziologie = 0
+    if inst.soziologie > 15:
+        inst.soziologie = 15
+    elif inst.soziologie < 0:
+        inst.soziologie = 0
+
+    try:
+        inst.geschichte = input("geschichtenote")
+    except SyntaxError:
+        inst.geschichte = 0
+    if inst.geschichte > 15:
+        inst.geschichte = 15
+    elif inst.geschichte < 0:
+        inst.geschichte = 0
+
     inst.gotmarks = True
 
 def calcandreturn():
