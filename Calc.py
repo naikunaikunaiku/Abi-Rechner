@@ -35,7 +35,7 @@ def getmarks():             #Noten abfragen
         inst.deutsch = 0
         
     try:
-        inst.biologie = int(input("biologienote"))
+        inst.biologie = int(input("biologienote"))      #bionote abfragen
     except SyntaxError:
         inst.biologie = 0
     if inst.biologie > 15:
@@ -44,7 +44,7 @@ def getmarks():             #Noten abfragen
         inst.biologie = 0
 
     try:
-        inst.mathe = input("mathenote")
+        inst.mathe = input("mathenote")                #mathenote abfragen
     except SyntaxError:
         inst.mathe = 0
     if inst.mathe > 15:
@@ -53,7 +53,7 @@ def getmarks():             #Noten abfragen
         inst.mathe = 0
 
     try:
-        inst.englisch = input("englischnote")
+        inst.englisch = input("englischnote")          #englischnote abfragen
     except SyntaxError:
         inst.englisch = 0
     if inst.englisch > 15:
@@ -62,7 +62,7 @@ def getmarks():             #Noten abfragen
         inst.englisch = 0
 
     try:
-        inst.soziologie = input("soziologienote")
+        inst.soziologie = input("soziologienote")       #soziologienote abfragen
     except SyntaxError:
         inst.soziologie = 0
     if inst.soziologie > 15:
@@ -71,7 +71,7 @@ def getmarks():             #Noten abfragen
         inst.soziologie = 0
 
     try:
-        inst.geschichte = input("geschichtenote")
+        inst.geschichte = input("geschichtenote")        #geschichtsnote abfragen
     except SyntaxError:
         inst.geschichte = 0
     if inst.geschichte > 15:
@@ -81,14 +81,14 @@ def getmarks():             #Noten abfragen
 
     inst.gotmarks = True
 
-def calcandreturn():
+def calcandreturn():                                     #durchschnitt ausrechnen und ausgeben
     if inst.gotmarks is True:
 
-        gesamt = float(inst.deutsch * 2 + inst.biologie * 2 + inst.mathe + inst.englisch + inst.soziologie + inst.geschichte)
+        gesamt = float(inst.deutsch * 2 + inst.biologie * 2 + inst.mathe + inst.englisch + inst.soziologie + inst.geschichte)    #lk's doppelt werten float für kommazahlen
 
-        durchschnittgesamt = float(gesamt / 8)
+        durchschnittgesamt = float(gesamt / 8)      #durch die anzahl der kurse
 
-        print str(durchschnittgesamt)
+        print str(durchschnittgesamt)               #ausgabe des durchschnittes
 
 getmarks()
 
