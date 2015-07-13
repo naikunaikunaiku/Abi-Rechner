@@ -9,7 +9,7 @@ __author__ = 'ivo'
 #Faecher
 
 class Calc:          
-    deutsch = 0               #Fächervariablen anlegen
+    deutsch = 0               #Faechervariablen anlegen
     biologie = 0
     mathe = 0
     englisch = 0
