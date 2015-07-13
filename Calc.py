@@ -8,31 +8,32 @@ __author__ = 'ivo'
 
 #Faecher
 
-class Calc:
-    deutsch = 0
+class Calc:          
+    deutsch = 0               #Fächervariablen anlegen
     biologie = 0
     mathe = 0
     englisch = 0
     soziologie = 0
     geschichte = 0
-    gotmarks = False
+    gotmarks = False         #noten abgefragt variable anlegen
 
 inst = Calc()
 
-def getmarks():
+def getmarks():             #Noten abfragen
 
-    try:
+    try:                                                #try weil leerer input=> Syntax Error
 
-        inst.deutsch = input("deutschnote")
+        inst.deutsch = input("deutschnote")             #abfrage der deutschnote
 
-    except SyntaxError:
+    except SyntaxError:                                 #Leerer input wird als 0 gewertet
 
         inst.deutsch = 0
 
-    if inst.deutsch > 15:
+    if inst.deutsch > 15:                               #alles über 15 wird als 15 gewertet
         inst.deutsch = 15
-    elif inst.deutsch < 0:
+    elif inst.deutsch < 0:                              #negative einträge werden als null gewertet
         inst.deutsch = 0
+        
     try:
         inst.biologie = int(input("biologienote"))
     except SyntaxError:
